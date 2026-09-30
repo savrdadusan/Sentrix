@@ -1,10 +1,9 @@
-<link rel="stylesheet" href="/Sentrix/css/homepage.css">
 <?php 
 session_start();
 
 require_once __DIR__ . '/views/header.php'; 
 ?>
-
+<link rel="stylesheet" href="/Sentrix/css/homepage.css">
 <canvas id="hero-bg"></canvas>
 <main class="home-container">
 
