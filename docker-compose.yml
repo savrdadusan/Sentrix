@@ -6,31 +6,32 @@ services:
       - "8080:80"
     volumes:
       - .:/var/www/html
+    # TENTO RIADOK PRIDÁŠ: Nainštaluje PDO MySQL ovládač a spustí Apache na popredí
+    command: sh -c "docker-php-ext-install pdo pdo_mysql && apache2-foreground"
 
-  # 2. Bunka pre MySQL a automatický import tvojho SQL súboru
+  # 2. Bunka pre MySQL (ostatné nechaj nezmenené)
   db:
     image: mysql:8.0
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD:
-      MYSQL_DATABASE: sentrix
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: root
     volumes:
       - mysql_data:/var/lib/mysql
       - ./db/sentrix.sql:/docker-entrypoint-initdb.d/sentrix.sql
 
-  # 3. Bunka pre phpMyAdmin (Grafické prostredie pre databázu)
+  # 3. Bunka pre phpMyAdmin (ostatné nechaj nezmenené)
   phpmyadmin:
     image: phpmyadmin:latest
     ports:
       - "8081:80"
     environment:
-      PMA_HOST: localhost
-      PMA_USER: sentrix
-      PMA_PASSWORD: 
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: root
     depends_on:
       - db
 
-# TENTO BLOK TU MUSÍ BYŤ, ABY DOCKER VEDEL, KDE MÁ DRŽAŤ DÁTA DATABÁZY:
 volumes:
   mysql_data:
