@@ -1,9 +1,9 @@
 <?php 
 session_start();
 
-require_once __DIR__ . '/views/header.php'; 
+require_once __DIR__ . 'views/header.php'; 
 ?>
-<link rel="stylesheet" href="/Sentrix/css/homepage.css">
+<link rel="stylesheet" href="css/homepage.css">
 <canvas id="hero-bg"></canvas>
 <main class="home-container">
 
@@ -42,5 +42,5 @@ require_once __DIR__ . '/views/header.php';
   </section>
 
 </main>
-<script src="/Sentrix/js/homepage.js"></script>
+<script src="js/homepage.js"></script>
 <?php require_once __DIR__ . '/views/footer.php'; ?>
