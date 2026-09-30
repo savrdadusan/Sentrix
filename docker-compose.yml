@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   # 1. Bunka pre tvoj PHP/HTML web
   web:
@@ -19,7 +17,6 @@ services:
       MYSQL_DATABASE: root
     volumes:
       - mysql_data:/var/lib/mysql
-      # TENTO RIADOK AUTOMATICKY NAHRÁ TVOJ SQL SÚBOR PRI ŠTARTE:
       - ./db/sentrix.sql:/docker-entrypoint-initdb.d/sentrix.sql
 
   # 3. Bunka pre phpMyAdmin (Grafické prostredie pre databázu)
@@ -33,3 +30,7 @@ services:
       PMA_PASSWORD: root
     depends_on:
       - db
+
+# TENTO BLOK TU MUSÍ BYŤ, ABY DOCKER VEDEL, KDE MÁ DRŽAŤ DÁTA DATABÁZY:
+volumes:
+  mysql_data:
