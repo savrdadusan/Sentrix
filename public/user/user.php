@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="/Sentrix/css/homepage.css">
 <?php require_once __DIR__ . '/../../views/header.php'; ?>
 
+<link rel="stylesheet" href="/css/homepage.css">
 
 <main class="home-container">
 

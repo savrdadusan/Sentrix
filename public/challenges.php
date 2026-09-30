@@ -22,7 +22,7 @@ if ($difficulty === 'all') {
     $challenges = $challengeModel->getByDifficulty($difficulty);
 }
 ?>
-<link rel="stylesheet" href="/Sentrix/css/challenges.css">
+<link rel="stylesheet" href="/css/challenges.css">
 
 <canvas id="radar-bg"></canvas>
 <main class="ix-container">
@@ -59,7 +59,7 @@ if ($difficulty === 'all') {
       <span class="points">+<?= $points ?> XP</span>
     </div>
 
-    <a href="/Sentrix/public/challenge.php?id=<?= $c['id'] ?>" class="challenge-btn">
+    <a href="/public/challenge.php?id=<?= $c['id'] ?>" class="challenge-btn">
       Enter Lab →
     </a>
 
@@ -70,6 +70,6 @@ if ($difficulty === 'all') {
 </div>
 
 </main>
-<script src="/Sentrix/js/challenges.js"></script>
+<script src="/js/challenges.js"></script>
 
 <?php require_once __DIR__ . '/../views/footer.php'; ?>

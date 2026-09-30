@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<link rel="stylesheet" href="/Sentrix/css/admin_challenges.css">
+<link rel="stylesheet" href="/css/admin_challenges.css">
 
 <?php 
   $isAdminPage = true;

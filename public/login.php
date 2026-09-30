@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 require_once __DIR__ . '/../views/header.php';
 ?>
-<link rel="stylesheet" href="/Sentrix/css/login.css">
+<link rel="stylesheet" href="/css/login.css">
 <canvas id="bgCanvas"></canvas>
 <div class="login-wrapper">
 
@@ -99,5 +99,5 @@ require_once __DIR__ . '/../views/header.php';
   </div>
 
 </div>
-<script src="/Sentrix/js/login.js"></script>
+<script src="/js/login.js"></script>
 <?php require_once __DIR__ . '/../views/footer.php'; ?>

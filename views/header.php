@@ -6,10 +6,10 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/sentrix/css/style.css?v=99">
+  <link rel="stylesheet" href="/css/style.css?v=99">
 
   <?php if (isset($isAdminPage) && $isAdminPage === true): ?>
-    <link rel="stylesheet" href="/sentrix/css/admin.css?v=99">
+    <link rel="stylesheet" href="/css/admin.css?v=99">
   <?php endif; ?>
 
 </head>
@@ -23,17 +23,17 @@
   </div>
 
   <div class="nav-center">
-    <a href="/Sentrix/public/profile.php" class="nav-link active" >Profile</a>
-    <a href="/Sentrix/index.php" class="nav-link">Dashboard</a>
-    <a href="/Sentrix/public/challenges.php" class="nav-link">Challenges</a>
-    <a href="/Sentrix/public/leaderboard.php" class="nav-link">Leaderboard</a>
+    <a href="/public/profile.php" class="nav-link active" >Profile</a>
+    <a href="/index.php" class="nav-link">Dashboard</a>
+    <a href="/public/challenges.php" class="nav-link">Challenges</a>
+    <a href="/public/leaderboard.php" class="nav-link">Leaderboard</a>
     <?php if (isset($_SESSION['user']) && $_SESSION['user']['role'] === 'admin'): ?>
-      <a href="/Sentrix/public/admin/admin.php" class="nav-link">⚙ Admin</a>
+      <a href="/public/admin/admin.php" class="nav-link">⚙ Admin</a>
   <?php endif; ?>
   </div>
 
   <div class="nav-right">
-    <a href="/Sentrix/public/logout.php" class="nav-link logout">Logout</a>
+    <a href="/public/logout.php" class="nav-link logout">Logout</a>
   </div>
 
 </nav>

@@ -4,7 +4,7 @@ class Auth {
 
     public static function check() {
         if (!isset($_SESSION['user'])) {
-            header("Location: /Sentrix/public/login.php");
+            header("Location: /public/login.php");
             exit;
         }
     }
@@ -15,7 +15,7 @@ class Auth {
 
     public static function adminOnly() {
         if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
-            header("Location: /Sentrix/public/login.php");
+            header("Location: /public/login.php");
             exit;
         }
     }

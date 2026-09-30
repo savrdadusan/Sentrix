@@ -6,7 +6,7 @@ require_once __DIR__ . '/../app/core/Database.php';
 require_once __DIR__ . '/../app/models/Challenge.php';
 
 if (!isset($_SESSION['user']['id'])) {
-    header("Location: /Sentrix/public/login.php");
+    header("Location: /public/login.php");
     exit;
 }
 
@@ -20,7 +20,7 @@ $challengeModel = new Challenge($conn);
 $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 
 if ($id === false || $id === null) {
-    header("Location: /Sentrix/public/challenges.php");
+    header("Location: /public/challenges.php");
     exit;
 }
 

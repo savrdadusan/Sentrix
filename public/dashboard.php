@@ -13,9 +13,9 @@ if (!isset($_SESSION['user'])) {
 $user = $_SESSION['user'];
 
 if ($user['role'] === 'admin') {
-    header("Location: /Sentrix/public/admin/admin.php");
+    header("Location: /public/admin/admin.php");
     exit;
 } else {
-    header("Location: /Sentrix/public/user/user.php");
+    header("Location: /public/user/user.php");
     exit;
 }

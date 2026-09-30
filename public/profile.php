@@ -28,7 +28,7 @@ if ($score >= 100) $badges[] = "Ethical Hacker";
 
 require_once __DIR__ . '/../views/header.php';
 ?>
-<link rel="stylesheet" href="/Sentrix/css/profile.css">
+<link rel="stylesheet" href="/css/profile.css">
 
 <canvas id="neuralCore"></canvas>
 <main class="ix-container">
@@ -113,6 +113,6 @@ require_once __DIR__ . '/../views/header.php';
   </section>
 
 </main>
-<script src="/Sentrix/js/profile.js"></script>
+<script src="/js/profile.js"></script>
 
 <?php require_once __DIR__ . '/../views/footer.php'; ?>
