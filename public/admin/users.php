@@ -26,7 +26,7 @@ if ($action === 'create' && $_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->execute([$username, $password, $role]);
     }
 
-    header("Location: /Sentrix/public/admin/users.php");
+    header("Location: /public/admin/users.php");
     exit;
 }
 
@@ -37,7 +37,7 @@ if ($action === 'edit' && $_SERVER['REQUEST_METHOD'] === 'POST' && $id) {
     $stmt = $conn->prepare("UPDATE users SET role = ? WHERE id = ?");
     $stmt->execute([$role, $id]);
 
-    header("Location: /Sentrix/public/admin/users.php");
+    header("Location: /public/admin/users.php");
     exit;
 }
 
@@ -50,7 +50,7 @@ if ($action === 'delete' && $id) {
     $stmt = $conn->prepare("DELETE FROM users WHERE id = ?");
     $stmt->execute([$id]);
 
-    header("Location: /Sentrix/public/admin/users.php");
+    header("Location: /public/admin/users.php");
     exit;
 }
 
@@ -65,7 +65,7 @@ if ($action === 'edit' && $id) {
 }
 ?>
 
-<link rel="stylesheet" href="/Sentrix/css/admin_users.css">
+<link rel="stylesheet" href="/css/admin_users.css">
 
 <?php require_once __DIR__ . '/../../views/header.php';?>
 
