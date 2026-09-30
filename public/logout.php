@@ -1,8 +1,12 @@
 <?php
-session_start();
-require_once __DIR__ . '/views/header.php';
+require_once __DIR__ . '/../config.php';
+
+$_SESSION = array();
+if (session_id() != "" || isset($_COOKIE[session_name()])) {
+    setcookie(session_name(), '', time() - 2592000, '/');
+}
 session_destroy();
 
-echo "Logged out";
-
-require_once __DIR__ . '/views/footer.php';
+header("Location: /public/login.php");
+exit;
+?>
