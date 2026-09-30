@@ -1,3 +1,13 @@
+<?php
+if (!isset($_COOKIE['role'])) {
+    setcookie('role', 'user');
+    $_COOKIE['role'] = 'user';
+}
+
+echo "<p>Your role: <span class='role'>" . htmlspecialchars($_COOKIE['role']) . "</span></p>";
+
+$isAdmin = ($_COOKIE['role'] === "admin");
+?>
 <?php require_once __DIR__ . '/../../views/header.php'; ?>
 
 <style>
@@ -53,17 +63,6 @@
 <div class="card">
 
 <h2 class="title">👤 User Panel</h2>
-
-<?php
-if (!isset($_COOKIE['role'])) {
-    setcookie('role', 'user');
-    $_COOKIE['role'] = 'user';
-}
-
-echo "<p>Your role: <span class='role'>" . htmlspecialchars($_COOKIE['role']) . "</span></p>";
-
-$isAdmin = ($_COOKIE['role'] === "admin");
-?>
 
 <?php if ($isAdmin): ?>
 
