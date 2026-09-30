@@ -1,9 +1,9 @@
 <?php 
 session_start();
 
-require_once __DIR__ . 'views/header.php'; 
+require_once __DIR__ . '/views/header.php'; 
 ?>
-<link rel="stylesheet" href="css/homepage.css">
+<link rel="stylesheet" href="/css/homepage.css">
 <canvas id="hero-bg"></canvas>
 <main class="home-container">
 
@@ -12,8 +12,8 @@ require_once __DIR__ . 'views/header.php';
     <p>Master Cybersecurity Through Real Exploitation Labs</p>
 
     <div class="hero-buttons">
-      <a href="public/challenges.php" class="btn-primary">🚀 Start Training</a>
-      <a href="public/login.php" class="btn-secondary">Create Account</a>
+      <a href="/public/challenges.php" class="btn-primary">🚀 Start Training</a>
+      <a href="/public/login.php" class="btn-secondary">Create Account</a>
     </div>
   </section>
 
@@ -38,9 +38,9 @@ require_once __DIR__ . 'views/header.php';
 
   <section class="cta">
     <h2>Become an Elite Hacker</h2>
-    <a href="public/login.php" class="btn-primary">Start Now</a>
+    <a href="/public/login.php" class="btn-primary">Start Now</a>
   </section>
 
 </main>
-<script src="js/homepage.js"></script>
+<script src="/js/homepage.js"></script>
 <?php require_once __DIR__ . '/views/footer.php'; ?>
