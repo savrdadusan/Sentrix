@@ -41,8 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 }
 
-require_once __DIR__ . '/../views/header.php';
-?>
+require_once __DIR__ . '/../views/header.php';?>
 <link rel="stylesheet" href="/css/login.css">
 <canvas id="bgCanvas"></canvas>
 <div class="login-wrapper">
@@ -56,9 +55,9 @@ require_once __DIR__ . '/../views/header.php';
 
     <h1 class="login-logo">SENTRIX</h1>
 
-    <?php if (!empty($error)): ?>
+    <?php if (!empty($error)):?>
       <div class="login-error"><?= $error ?></div>
-    <?php endif; ?>
+    <?php endif;?>
 
     <form method="POST" id="loginForm" class="auth-form">
 
@@ -100,4 +99,4 @@ require_once __DIR__ . '/../views/header.php';
 
 </div>
 <script src="/js/login.js"></script>
-<?php require_once __DIR__ . '/../views/footer.php'; ?>
+<?php require_once __DIR__ . '/../views/footer.php';?>

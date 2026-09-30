@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="/css/style.css?v=99">
 
-  <?php if (isset($isAdminPage) && $isAdminPage === true): ?>
+  <?php if (isset($isAdminPage) && $isAdminPage === true):?>
     <link rel="stylesheet" href="/css/admin.css?v=99">
   <?php endif; ?>
 

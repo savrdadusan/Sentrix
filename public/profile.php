@@ -26,8 +26,7 @@ if ($score >= 30) $badges[] = "XSS Hunter";
 if ($score >= 60) $badges[] = "Cyber Warrior";
 if ($score >= 100) $badges[] = "Ethical Hacker";
 
-require_once __DIR__ . '/../views/header.php';
-?>
+require_once __DIR__ . '/../views/header.php';?>
 <link rel="stylesheet" href="/css/profile.css">
 
 <canvas id="neuralCore"></canvas>
@@ -115,4 +114,4 @@ require_once __DIR__ . '/../views/header.php';
 </main>
 <script src="/js/profile.js"></script>
 
-<?php require_once __DIR__ . '/../views/footer.php'; ?>
+<?php require_once __DIR__ . '/../views/footer.php';?>
